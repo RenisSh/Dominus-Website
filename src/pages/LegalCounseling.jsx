@@ -10,4 +10,4 @@ const LegalCounseling = () => {
   )
 }
 
-export default LegalCounseling
+export default LegalCounseling;

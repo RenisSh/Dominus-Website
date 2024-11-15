@@ -8,4 +8,4 @@ const Bailiff = () => {
   )
 }
 
-export default Bailiff
+export default Bailiff;

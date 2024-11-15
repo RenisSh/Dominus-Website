@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -11,15 +12,76 @@ const Navbar = () => {
         <img src={logo} alt="Logo" width="160" height="40" className='m-2'/>
           
         <ul className='flex list-none'>
-          <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Home</li>
-          <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Sherbimet</li>
+          {/* <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Home</li> */}
+          {/* <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Sherbimet</li>
           <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Legjislactioni</li>
           <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Ankandet</li>
-          <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Na kontaktoni</li>
+          <li className='px-10 hover:bg-gray-600 rounded-xl font-bold hover:text-white'>Na kontaktoni</li> */}
+          
+          <li className='px-1'>
+              <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                      isActive
+                          ? 'font-bold text-white bg-gray-600 rounded-xl px-4 py-2'
+                          : 'hover:bg-gray-600 hover:text-white rounded-xl font-bold px-4 py-2'
+                  }
+              >
+                  Home
+              </NavLink>
+          </li>
+          <li className='px-2'>
+              <NavLink
+                  to="/sherbimet"
+                  className={({ isActive }) =>
+                      isActive
+                          ? 'font-bold text-white bg-gray-600 rounded-xl px-4 py-2'
+                          : 'hover:bg-gray-600 hover:text-white rounded-xl font-bold px-4 py-2'
+                  }
+              >
+                  Sherbimet
+              </NavLink>
+          </li>
+          <li className='px-2'>
+              <NavLink
+                  to="/legjislacioni"
+                  className={({ isActive }) =>
+                      isActive
+                          ? 'font-bold text-white bg-gray-600 rounded-xl px-4 py-2'
+                          : 'hover:bg-gray-600 hover:text-white rounded-xl font-bold px-4 py-2'
+                  }
+              >
+                  Legjislacioni
+              </NavLink>
+          </li>
+          <li className='px-2'>
+              <NavLink
+                  to="/ankandet"
+                  className={({ isActive }) =>
+                      isActive
+                          ? 'font-bold text-white bg-gray-600 rounded-xl px-4 py-2'
+                          : 'hover:bg-gray-600 hover:text-white rounded-xl font-bold px-4 py-2'
+                  }
+              >
+                  Ankandet
+              </NavLink>
+          </li>
+          <li className='px-2'>
+              <NavLink
+                  to="/na-kontaktoni"
+                  className={({ isActive }) =>
+                      isActive
+                          ? 'font-bold text-white bg-gray-600 rounded-xl px-4 py-2'
+                          : 'hover:bg-gray-600 hover:text-white rounded-xl font-bold px-4 py-2'
+                  }
+              >
+                  Na kontaktoni
+              </NavLink>
+          </li>
         </ul>
       </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;

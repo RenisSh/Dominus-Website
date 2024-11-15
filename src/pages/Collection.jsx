@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 
 const Collection = () => {
   return (
@@ -6,8 +7,9 @@ const Collection = () => {
       <h1>
         THIS IS THE COLLECTION PAGE
       </h1>
+        <Outlet/>
     </div>
   )
 }
 
-export default Collection
+export default Collection;

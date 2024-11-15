@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import counseling from './assets/counseling.svg'
 import bailiff from './assets/bailiff.svg'
 import collection from './assets/collection.svg';
-import { Router } from 'react-router-dom';
+import { Outlet, Router } from 'react-router-dom';
 import ServicesComponent from './components/ServicesComponent';
 import Team from './components/Team';
 import Footer from './components/Footer';
@@ -18,18 +18,19 @@ function App() {
       <div>
           {/* <div className='color: bg-[var(--dark-beige)]'> */}
           {/* sticky top-0 */}
-          <div className='color: bg-[var(--Remi)]'> 
+          {/* <div className='color: bg-[var(--Remi)]'> 
             <Navbar/>
-          </div>
+          </div> */}
           <div>
             <ServicesComponent/>
           </div>
           <div>
             <Team/>
           </div>
-          <div>
+          {/* <div>
             <Footer/>
-          </div>
+          </div> */}
+          
       </div>  
   // </Router>
   )
